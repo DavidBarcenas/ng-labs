@@ -1,5 +1,5 @@
 .auth {
-  background-color: #fff;
+  background-color: var(--white);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   min-height: 100vh;
@@ -18,7 +18,7 @@
   &-content {
     margin: auto;
     text-align: center;
-    width: 500px;
+    width: 450px;
   }
 
   &-subtitle {
@@ -31,25 +31,38 @@
   }
 
   &-footer {
-    color: #777;
     display: flex;
     justify-content: space-between;
     font-size: .8rem;
   }
 
   &-link {
-    color: #777;
+    color: inherit;
     display: inline-block;
     margin-right: auto;
   }
 }
 
 .social-btn {
-  background: #fff;
-  border: 1px solid #ccc;
+  background: var(--white);
+  border: 1px solid var(--gray-400);
   border-radius: .3rem;
-  padding: .5rem .75rem;
+  gap: .5rem;
+  padding: .55rem .75rem;
   width: 100%;
+
+  &:hover {
+    background: var(--gray-100);
+  }
+
+  &:active {
+    background: var(--gray-200);
+  }
+
+  &-icon {
+    height: 20px;
+    width: 20px;
+  }
 }
 
 .divider {
@@ -62,14 +75,14 @@
     left: 0;
     top: 50%;
     display: block;
-    background: #ccc;
+    background: var(--gray-400);
     height: 1px;
     width: 100%;
     transform: translateY(-50%);
   }
 
   &-text {
-    background: #fff;
+    background: var(--white);
     display: inline-block;
     padding: 0 .9rem;
     position: relative;
