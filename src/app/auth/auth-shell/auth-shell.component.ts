@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './auth-shell.component.html',
-  styleUrl: './auth-shell.component.scss'
+  styleUrl: './auth-shell.component.scss',
 })
-export class AuthShellComponent {
-
-}
+export class AuthShellComponent {}
