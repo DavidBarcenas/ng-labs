@@ -1,28 +1,36 @@
-<section class="auth">
-  <div class="auth-forms">
+<section class="bg-white grid grid-cols-2 min-h-screen">
+  <div class="flex flex-col justify-between p-8">
     <header>
-      <h1 class="heading-5">Angular Labs</h1>
+      <h1 class="text-lg font-extrabold">Angular Labs</h1>
     </header>
-    <div class="auth-content text-md font-medium">
-      <h2 class="heading-4">Inicia sesión en Angular Labs</h2>
-      <p class="auth-subtitle gray-600">Identidad con visión de futuro</p>
-      <div class="auth-social">
-        <button class="social-btn flex-center">
-          <img class="social-btn-icon" src="assets/images/google-icon.svg" alt="Icono de google" />
+    <div class="m-auto text-center text-md font-medium w-[450px]">
+      <h2 class="text-2xl font-extrabold">Inicia sesión en Angular Labs</h2>
+      <p class="mt-3 mb-8 text-[#718096]">Identidad con visión de futuro</p>
+      <div class="flex gap-4">
+        <button
+          class="border border-[#cbd5e0] rounded-md flex items-center justify-center gap-2 py-2 px-3 w-full hover:bg-[#f7fafc] active:bg-[#edf2f7]"
+        >
+          <img class="h-5 w-5" src="assets/images/google-icon.svg" alt="Icono de google" />
           Ingresa con Google
         </button>
-        <button class="social-btn flex-center">
-          <img class="social-btn-icon" src="assets/images/github-icon.svg" alt="Icono de github" />
+        <button
+          class="border border-[#cbd5e0] rounded-md flex items-center justify-center gap-2 py-2 px-3 w-full hover:bg-[#f7fafc] active:bg-[#edf2f7]"
+        >
+          <img class="h-5 w-5" src="assets/images/github-icon.svg" alt="Icono de github" />
           Ingresa con Github
         </button>
       </div>
-      <div class="divider">
-        <span class="divider-text gray-600">o con tu correo</span>
+      <div class="my-8 relative">
+        <span
+          class="absolute left-0 top-[55%] block bg-[#cbd5e0] h-[1px] w-full -translate-y-1/2"
+          aria-hidden="true"
+        ></span>
+        <span class="bg-white text-[#718096] inline-block px-4 relative">o con tu correo</span>
       </div>
       <ng-content />
     </div>
-    <footer class="auth-footer gray-600 font-medium">
-      <a class="auth-link" href="#">Politica de privacidad</a>
+    <footer class="flex justify-between text-sm">
+      <a class="text-inherit" href="#">Politica de privacidad</a>
       <span>Copyright 2024</span>
     </footer>
   </div>
