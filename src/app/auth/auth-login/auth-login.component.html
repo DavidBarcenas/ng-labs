@@ -1,6 +1,15 @@
 <app-auth-shell>
   <form>
-    <input type="text" placeholder="Usuario o correo electrónico">
-    <input type="password" placeholder="Contraseña">
+    <input class="w-full border border-gray-400 px-4 py-3 rounded-md outline-none placeholder:text-gray-500 mb-5" type="text" placeholder="Correo electrónico">
+    <input class="w-full border border-gray-400 px-4 py-3 rounded-md outline-none placeholder:text-gray-500 mb-5" type="password" placeholder="Contraseña">
+    <div class="flex justify-between text-sm mb-8">
+      <label class="flex gap-2" for="remember">
+        <input type="checkbox" id="remember">
+        Recordar
+      </label>
+      <a class="text-orange-600" href="#">¿Olvidaste la contraseña?</a>
+    </div>
+    <button class="bg-orange-600 text-white mb-7 px-4 py-3 rounded-md w-full">Acceder</button>
+    <p class="text-sm">¿No tienes una cuenta? <a class="font-bold" href="#">Regístrate</a></p>
   </form>
 </app-auth-shell>
