@@ -11,6 +11,6 @@ export class AuthLoginComponent {
   showPass = signal(false);
 
   togglePass() {
-    this.showPass.update(value => !value)
+    this.showPass.update((value) => !value);
   }
 }
