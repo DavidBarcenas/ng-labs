@@ -1,15 +1,29 @@
 <app-auth-shell>
   <form>
-    <input class="w-full border border-gray-400 px-4 py-3.5 rounded-md outline-none placeholder:text-gray-500 mb-5" type="text" placeholder="Correo electrónico">
-    <input class="w-full border border-gray-400 px-4 py-3.5 rounded-md outline-none placeholder:text-gray-500 mb-5" type="password" placeholder="Contraseña">
+    <input class="form-control" type="text" placeholder="Correo electrónico" />
+    <div class="relative">
+      <input
+        [type]="showPass() ? 'text' : 'password'"
+        class="form-control"
+        placeholder="Contraseña"
+      />
+      <span
+        (click)="togglePass()"
+        (keyup.enter)="togglePass()"
+        tabindex="0"
+        class="material-symbols-outlined absolute top-4 right-4 cursor-pointer text-gray-700 select-none"
+      >
+        {{ showPass() ? "visibility" : "visibility_off" }}
+      </span>
+    </div>
     <div class="flex justify-between text-sm mb-8">
-      <label class="flex gap-2" for="remember">
-        <input type="checkbox" id="remember">
+      <label class="flex gap-2 cursor-pointer" for="remember">
+        <input type="checkbox" id="remember" class="accent-primary" />
         Recordar
       </label>
-      <a class="text-[#ec8313]" href="#">¿Olvidaste la contraseña?</a>
+      <a class="link text-primary" href="#">¿Olvidaste la contraseña?</a>
     </div>
-    <button type="button" class="bg-gradient-to-r from-[#e06016] to-[#ec8313] text-white font-semibold mb-7 px-4 py-3.5 rounded-md w-full hover:from-[#de7136] hover:to-[#ed9231]">Ingresar</button>
-    <p class="text-sm">¿No tienes una cuenta? <a class="font-bold" href="#">Regístrate</a></p>
+    <button type="button" class="btn-primary">Ingresar</button>
+    <p class="text-sm">¿No tienes una cuenta? <a class="link font-bold" href="#">Regístrate</a></p>
   </form>
 </app-auth-shell>

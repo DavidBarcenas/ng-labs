@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { AuthShellComponent } from '../auth-shell/auth-shell.component';
 
 @Component({
@@ -7,4 +7,10 @@ import { AuthShellComponent } from '../auth-shell/auth-shell.component';
   templateUrl: './auth-login.component.html',
   imports: [AuthShellComponent],
 })
-export class AuthLoginComponent {}
+export class AuthLoginComponent {
+  showPass = signal(false);
+
+  togglePass() {
+    this.showPass.update(value => !value)
+  }
+}
