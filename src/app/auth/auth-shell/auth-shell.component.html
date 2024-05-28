@@ -1,7 +1,17 @@
-<section class="bg-white grid grid-cols-2 min-h-screen">
-  <div [ngClass]="{'order-2': isRegister()}" class="flex flex-col justify-between p-8 form-container">
-    <header>
-      <h1 class="text-lg font-extrabold">Angular Labs</h1>
+<section class="bg-white grid grid-cols-2 min-h-screen relative">
+  <div
+    [ngClass]="{ 'order-2': isRegister() }"
+    class="flex flex-col justify-between p-8 form-container"
+  >
+    <header class="absolute top-3 left-4 z-10">
+      <a class="text-lg font-extrabold">
+        <img
+          src="assets/images/icon-angular.png"
+          alt="Logo angular"
+          [class.invert]="isRegister()"
+          class="w-14"
+        />
+      </a>
     </header>
     <div class="m-auto text-center text-md font-medium w-[450px]">
       <h2 class="text-2xl font-extrabold">{{ sectionTitle() }} en Angular Labs</h2>
