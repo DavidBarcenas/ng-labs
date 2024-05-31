@@ -2,17 +2,9 @@
   <form>
     <input class="form-control" type="text" placeholder="Correo electrónico" />
     <div class="relative">
-      <input
-        [type]="showPass() ? 'text' : 'password'"
-        class="form-control"
-        placeholder="Contraseña"
-      />
-      <span
-        (click)="togglePass()"
-        (keyup.enter)="togglePass()"
-        tabindex="0"
-        class="material-symbols-outlined absolute top-4 right-4 cursor-pointer text-gray-700 select-none"
-      >
+      <input [type]="showPass() ? 'text' : 'password'" class="form-control" placeholder="Contraseña" />
+      <span (click)="togglePass()" (keyup.enter)="togglePass()" tabindex="0"
+        class="material-symbols-outlined absolute top-4 right-4 cursor-pointer text-gray-700 select-none">
         {{ showPass() ? "visibility" : "visibility_off" }}
       </span>
     </div>
@@ -24,6 +16,9 @@
       <a class="link text-primary" href="#">¿Olvidaste la contraseña?</a>
     </div>
     <button type="button" class="btn-primary">Ingresar</button>
-    <p class="text-sm">¿No tienes una cuenta? <a routerLink="/acceder/registro" routerLinkActive="router-link-active"  class="link font-bold">Regístrate</a></p>
+    <p class="text-sm">
+      ¿No tienes una cuenta?
+      <a routerLink="/acceder/registro" routerLinkActive="router-link-active" class="link font-bold">Regístrate</a>
+    </p>
   </form>
 </app-auth-shell>

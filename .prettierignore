@@ -44,3 +44,6 @@ Thumbs.db
 *-debug.log
 .runtimeconfig.json
 firebase.config.ts
+
+# ignore all HTML files(matches all the files with the .html extension)
+**/*.html

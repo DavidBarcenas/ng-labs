@@ -6,22 +6,16 @@
     </div>
     <input class="form-control" type="text" placeholder="Correo electrónico" />
     <div class="relative">
-      <input
-        [type]="showPass() ? 'text' : 'password'"
-        class="form-control"
-        placeholder="Contraseña"
-      />
-      <span
-        (click)="togglePass()"
-        (keyup.enter)="togglePass()"
-        tabindex="0"
-        class="material-symbols-outlined absolute top-4 right-4 cursor-pointer text-gray-700 select-none"
-      >
+      <input [type]="showPass() ? 'text' : 'password'" class="form-control" placeholder="Contraseña" />
+      <span (click)="togglePass()" (keyup.enter)="togglePass()" tabindex="0"
+        class="material-symbols-outlined absolute top-4 right-4 cursor-pointer text-gray-700 select-none">
         {{ showPass() ? "visibility" : "visibility_off" }}
       </span>
     </div>
-    <p class="text-xs text-gray-500 font-semibold mb-4">Al crear una cuenta, está aceptando nuestra <a href="#" class="link cursor-pointer text-gray-600 font-bold">Política de privacidad.</a></p>
+    <p class="text-xs text-gray-500 font-semibold mb-4">Al crear una cuenta, está aceptando nuestra <a href="#"
+        class="link cursor-pointer text-gray-600 font-bold">Política de privacidad.</a></p>
     <button type="button" class="btn-primary">Registrarse</button>
-    <p class="text-sm">¿Ya tienes una cuenta? <a routerLink="/acceder" class="link font-bold cursor-pointer">Inicia sesión</a></p>
+    <p class="text-sm">¿Ya tienes una cuenta? <a routerLink="/acceder" class="link font-bold cursor-pointer">Inicia
+        sesión</a></p>
   </form>
 </app-auth-shell>
