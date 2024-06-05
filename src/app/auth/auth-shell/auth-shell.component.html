@@ -1,8 +1,9 @@
 <section class="bg-white grid grid-cols-2 min-h-screen relative">
   <div [ngClass]="{ 'order-2': isRegister() }" class="flex flex-col justify-between p-8 form-container">
     <header class="absolute top-3 left-4 z-10">
-      <a class="text-lg font-extrabold">
-        <img src="assets/images/icon-angular.png" alt="Logo angular" [class.invert]="isRegister()" class="w-14" />
+      <a class="block cursor-pointer">
+        <img ngSrc="assets/images/icon-angular.png" alt="Logo angular" width="56" height="56" priority
+          [class.invert]="isRegister()" />
       </a>
     </header>
     <div class="m-auto text-center text-md font-medium w-[450px]">

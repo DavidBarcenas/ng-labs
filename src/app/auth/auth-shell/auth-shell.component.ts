@@ -1,10 +1,10 @@
-import { NgClass } from '@angular/common';
+import { NgClass, NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 
 @Component({
   selector: 'app-auth-shell',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, NgOptimizedImage],
   templateUrl: './auth-shell.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
