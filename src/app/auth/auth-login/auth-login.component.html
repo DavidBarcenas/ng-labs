@@ -4,7 +4,7 @@
     <div class="relative">
       <input [type]="showPass() ? 'text' : 'password'" class="form-control" placeholder="Contraseña" />
       <span (click)="togglePass()" (keyup.enter)="togglePass()" tabindex="0"
-        class="material-symbols-outlined absolute top-4 right-4 cursor-pointer text-gray-700 select-none">
+        class="material-symbols-outlined absolute top-3 right-4 cursor-pointer text-gray-700 select-none">
         {{ showPass() ? "visibility" : "visibility_off" }}
       </span>
     </div>
@@ -15,7 +15,7 @@
       </label>
       <a routerLink="../cuenta/recuperar" class="link text-primary">¿Olvidaste la contraseña?</a>
     </div>
-    <button type="button" class="btn-primary">Ingresar</button>
+    <button type="button" class="btn-primary w-full mb-7">Ingresar</button>
     <p class="text-sm">
       ¿No tienes una cuenta?
       <a routerLink="../registro" routerLinkActive="router-link-active" class="link font-bold">Regístrate</a>
