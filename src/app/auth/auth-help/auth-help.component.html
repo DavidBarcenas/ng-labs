@@ -1,6 +1,17 @@
-<section class="bg-gray-200 h-screen">
-  <header>
-    <h1>Angular labs</h1>
-    <button>Iniciar sesión</button>
+<section class="bg-gray-50 h-screen">
+  <header class="flex justify-between items-center bg-gray-900 h-[80px] text-white px-5">
+    <h1 class="flex items-center gap-1">
+      <img ngSrc="assets/images/angular-icon.png" alt="Logo angular" class="invert" width="50" height="50" priority />
+      <span class="font-semibold">Angular Labs</span>
+    </h1>
+    <a routerLink="/app/acceder" class="btn-primary w-40">Iniciar sesión</a>
   </header>
+  <div class="h-[calc(100vh-88px)] flex items-center justify-center">
+    <div class="bg-white w-full max-w-[500px] text-center p-10 rounded-md shadow-sm">
+      <h2 class="text-2xl font-bold mb-4 mx-auto w-3/4">¿Necesita ayuda con su cuenta?</h2>
+      <p class="text-sm text-gray-600 font-medium mb-9">Introduzca la dirección de correo electrónico asociada a su cuenta y le enviaremos un enlace para restablecer su contraseña.</p>
+      <input type="text" class="form-control" placeholder="Correo electrónico">
+      <button type="button" class="btn-primary w-full mb-7">Enviar enlace</button>
+    </div>
+  </div>
 </section>
