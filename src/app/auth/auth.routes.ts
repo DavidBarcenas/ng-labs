@@ -16,6 +16,7 @@ export const authRoutes: Route[] = [
     loadComponent: () => import('./auth-help/auth-help.component').then((c) => c.AuthHelpComponent),
   },
   {
-    path: '**', redirectTo: 'acceder'
-  }
+    path: '**',
+    redirectTo: 'acceder',
+  },
 ];

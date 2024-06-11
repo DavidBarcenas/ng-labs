@@ -8,6 +8,4 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink, NgOptimizedImage],
   templateUrl: './auth-help.component.html',
 })
-export class AuthHelpComponent {
-
-}
+export class AuthHelpComponent {}
