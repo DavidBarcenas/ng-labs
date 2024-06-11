@@ -12,6 +12,6 @@ export class AuthShellComponent {
   isRegister = input(false, {
     transform: (value: boolean | string) => (typeof value === 'string' ? value === '' : value),
   });
-  sectionTitle = computed(() => (this.isRegister() ? 'Crea una cuenta' : 'Inicia sesión'));
+  sectionTitle = computed(() => (this.isRegister() ? 'Cree una cuenta' : 'Iniciar sesión'));
   socialBtnText = computed(() => (this.isRegister() ? 'Registrarse' : 'Ingresar'));
 }
