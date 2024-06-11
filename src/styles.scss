@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .form-control {
-  @apply w-full border border-gray-400 px-4 py-[0.7rem] rounded-md outline-none placeholder:text-gray-500 mb-5 focus:border-primary;
+  @apply w-full border border-gray-400 px-4 py-[0.7rem] font-semibold text-sm rounded-md outline-none placeholder:text-gray-500 mb-5 focus:border-primary;
 }
 
 .btn-primary {
-  @apply bg-primary text-white font-semibold px-4 py-3 rounded-md transition-colors hover:bg-[#e67515] active:bg-[#e26a14];
+  @apply bg-primary text-white tracking-wide font-semibold px-4 py-3 rounded-md text-center transition-colors hover:bg-[#e67515] active:bg-[#e26a14];
 }
 
 .link {
