@@ -7,6 +7,4 @@ import { Component } from '@angular/core';
   imports: [NgOptimizedImage],
   templateUrl: './launcher.component.html',
 })
-export class LauncherComponent {
-
-}
+export class LauncherComponent {}
