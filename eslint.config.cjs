@@ -8,16 +8,11 @@ module.exports = [
     ignores: ['**/dist'],
   },
   {
-    files: [
-      '**/*.ts',
-      '**/*.tsx',
-      '**/*.js',
-      '**/*.jsx',
-      '**/*.cjs',
-      '**/*.mjs',
-    ],
+    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs'],
     // Override or add rules here
-    rules: {},
+    rules: {
+      'no-console': 'warn',
+    },
   },
   ...nx.configs['flat/angular'],
   ...nx.configs['flat/angular-template'],
