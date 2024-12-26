@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
-import { CoursesWithFetchService } from '../courses/data-access/courses-with-fetch.service';
 import { Course } from '../courses/models/course.model';
+import { CoursesService } from '../courses/data-access/courses.service';
 
 @Component({
   selector: 'lib-home',
@@ -10,7 +10,7 @@ import { Course } from '../courses/models/course.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
-  #coursesWithFetchService = inject(CoursesWithFetchService);
+  #coursesService = inject(CoursesService);
   courses = signal<Course[]>([]);
 
   constructor() {
@@ -19,7 +19,7 @@ export class HomeComponent {
 
   async getAllCourses() {
     try {
-      const data = await this.#coursesWithFetchService.getAll();
+      const data = await this.#coursesService.getAll();
       this.courses.set(data);
     } catch (error) {
       console.error(error);

@@ -1,3 +1,7 @@
+export type GetCoursesResponse = {
+  courses: Course[];
+};
+
 export type Course = {
   id: string;
   title: string;
