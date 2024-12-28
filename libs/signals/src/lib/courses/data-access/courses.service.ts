@@ -15,4 +15,19 @@ export class CoursesService {
     const response = await firstValueFrom(courses$);
     return response.courses;
   }
+
+  async create(course: Omit<Course, 'id'>): Promise<Course> {
+    const course$ = this.#http.post<Course>(`${this.#apiURL}/courses`, course);
+    return firstValueFrom(course$);
+  }
+
+  async update(id: string, course: Partial<Course>): Promise<Course> {
+    const course$ = this.#http.put<Course>(`${this.#apiURL}/courses/${id}`, course);
+    return firstValueFrom(course$);
+  }
+
+  async delete(id: string): Promise<void> {
+    const deletedCourse$ = this.#http.delete<void>(`${this.#apiURL}/courses/${id}`);
+    return firstValueFrom(deletedCourse$);
+  }
 }
