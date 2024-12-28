@@ -1,10 +1,11 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { Course } from '../courses/models/course.model';
 import { CoursesService } from '../courses/data-access/courses.service';
+import { CourseListComponent } from '../courses/ui/course-list/course-list.component';
 
 @Component({
   selector: 'lib-home',
-  imports: [],
+  imports: [CourseListComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -12,6 +13,10 @@ import { CoursesService } from '../courses/data-access/courses.service';
 export class HomeComponent {
   #coursesService = inject(CoursesService);
   courses = signal<Course[]>([]);
+  beginnerCourses = computed(() => {
+    const courses = this.courses();
+    return courses.filter((course) => course.category === 'BEGINNER');
+  });
 
   constructor() {
     this.getAllCourses();

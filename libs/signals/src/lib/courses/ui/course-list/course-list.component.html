@@ -1,0 +1,19 @@
+@for (course of courses(); track course.id) {
+  <mat-card class="course-card" appearance="outlined">
+    <mat-card-header>
+      <mat-card-title class="course-title">{{course.title}}</mat-card-title>
+    </mat-card-header>
+    <div class="course-image">
+      <img mat-card-image [ngSrc]="course.iconUrl" [alt]="course.title" fill priority>
+    </div>
+    <mat-card-content>
+      <p>{{course.longDescription}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>VIEW</button>
+      <button mat-button>BUY</button>
+      <button mat-button>DELETE</button>
+    </mat-card-actions>
+  </mat-card>
+}

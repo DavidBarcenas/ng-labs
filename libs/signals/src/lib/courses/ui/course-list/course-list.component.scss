@@ -1,0 +1,20 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.course-card {
+  background-color: #fff;
+  max-width: 300px;
+}
+
+.course-title {
+  font-size: 1em;
+}
+
+.course-image {
+  aspect-ratio: 2;
+  margin-bottom: .75em;
+  position: relative;
+}
